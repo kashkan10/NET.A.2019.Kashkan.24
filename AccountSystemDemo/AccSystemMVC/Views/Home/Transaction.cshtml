@@ -1,0 +1,24 @@
+﻿@model AccSystemMVC.Models.Account
+@{
+    ViewBag.Title = "Transit";
+}
+
+<h2>Transit</h2>
+<form method="post" action="/Home/Transaction">
+    <input type="hidden" value="@Model.Id" name="id" />
+    <table>
+        <tr>
+            <td><p>Введите номер аккаунта </p></td>
+            <td><input type="text" name="idTo" /> </td>
+        </tr>
+        <tr>
+            <td><p>Введите сумму </p></td>
+            <td><input type="text" name="sum" /> </td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Ok" /> </td>
+            <td></td>
+        </tr>
+    </table>
+</form>
+

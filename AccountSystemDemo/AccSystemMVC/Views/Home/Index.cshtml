@@ -1,0 +1,29 @@
+﻿@model IEnumerable<AccSystemMVC.Models.Account>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    <h3>Accounts</h3>
+    <table>
+        <tr class="header">
+            <td><p>Id</p></td>
+            <td><p>Owner</p></td>
+            <td><p>Balance</p></td>
+            <td><p>CardType</p></td>
+            <td></td>
+        </tr>
+        @foreach (AccSystemMVC.Models.Account acc in Model)
+        {
+        <tr>
+            <td><p>@acc.Id</p></td>
+            <td><p>@acc.Owner</p></td>
+            <td><p>@acc.Balance</p></td>
+            <td><p>@acc.CardType.ToString()</p></td>
+            <td><p><a href="/Home/Details/@acc.Id">Details</a></p></td>
+
+        </tr>
+        }
+        <tr><td><p><a href="/Home/Create/">Добавить</a></p></td></tr>
+    </table>
+</div>

@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Create";
+}
+
+<form method="post" action="/Home/Create">
+    <input type="hidden" value="@ViewBag.Id" name="Id" />
+    <table>
+        <tr>
+            <td><p>Введите имя </p></td>
+            <td><input type="text" name="Owner" /> </td>
+        </tr>
+        <tr>
+            <td><p>Введите баланс :</p></td>
+            <td><input type="text" name="Balance" /> </td>
+        </tr>
+        <tr> @Html.DropDownList("CardType", new SelectList(new string[] { "Base", "Gold", "Platinum" }), "CardType")</tr>
+        <tr>
+            <td><input type="submit" value="Add" /> </td>
+            <td></td>
+        </tr>
+    </table>
+</form>
+

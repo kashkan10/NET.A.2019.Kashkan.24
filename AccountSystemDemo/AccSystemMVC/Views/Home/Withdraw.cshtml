@@ -1,0 +1,21 @@
+﻿@model AccSystemMVC.Models.Account
+@{
+    ViewBag.Title = "Withdraw";
+}
+
+<h2>Withdraw</h2>
+
+<form method="post" action="/Home/Withdraw">
+    <input type="hidden" value="@Model.Id" name="id" />
+    <table>
+        <tr>
+            <td><p>Введите сумму </p></td>
+            <td><input type="text" name="sum" /> </td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Ok" /> </td>
+            <td></td>
+        </tr>
+    </table>
+</form>
+
